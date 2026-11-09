@@ -1,27 +1,54 @@
-# USSD & Mobile Services Simulator
+# Loan Calculator
 
-A lightweight Python Flask application that simulates a telecom USSD menu flow (View Balance, Recharge, Kopa Loans, and More) paired with a mobile-native web popup interface for real-time local testing and demonstration.
+A simple web-based loan calculator built with HTML, CSS, and JavaScript. It helps users estimate loan repayments by entering the principal amount, annual interest rate, and repayment period in months.
 
 ---
 
- 🚀 Features
-* **Session State Management:** Tracks user navigation history using accumulator strings (e.g., `3*1` for nested menus).
-* **Telecom Protocol Simulation:** Mimics standard carrier response syntax using `CON` (continue session) and `END` (terminate session).
-* **Mobile-Native UI:** Includes a built-in browser-based popup interface designed to look and feel like a native mobile carrier dialog box.
-* **RESTful API Integration:** Utilizes asynchronous JavaScript (`fetch`) to handle communication between the frontend interface and Python backend.
+## 🚀 Features
+* **Loan Amount Input:** Enter the loan principal in KES.
+* **Interest Rate Calculation:** Add the annual interest rate as a percentage.
+* **Repayment Period Input:** Specify the loan period in months.
+* **Instant Results:** Calculate monthly payment, total interest, and total payable amount.
+* **Responsive UI:** Clean card-based interface for easy local use in a browser.
 
 ---
 
 ## 🛠️ Tech Stack
-* **Backend:** Python, Flask, REST API routing
-* **Frontend:** HTML5, CSS3, JavaScript (ES6+), DOM Manipulation
-* **Tools:** Git, GitHub, VS Code
+* **Frontend:** HTML5, CSS3, JavaScript
+* **Tools:** VS Code, Git, GitHub
 
 ---
 
 ## 📂 Project Structure
 ```text
-ussd-mobile-simulator/
+Loan Calculator/
 │
-├── app.py              # Main Flask server containing USSD logic & UI template
-└── README.md           # Project documentation
+├── loan_calculator.html   # Main calculator interface and logic
+├── README.md              # Project documentation
+└── .gitignore             # Optional project ignore file (if present)
+```
+
+---
+
+## ▶️ How to Use
+1. Open `loan_calculator.html` in your browser.
+2. Enter:
+   - Loan Amount (KES)
+   - Annual Interest Rate (%)
+   - Repayment Period (Months)
+3. Click `Calculate Repayment`.
+4. View the monthly payment, total interest, and total payable amount.
+
+---
+
+## 🧮 Calculation Method
+This project uses a simple interest formula for easy learning and quick estimation:
+
+- Total Interest = (Principal × Rate × Time in Years) / 100
+- Total Payable = Principal + Total Interest
+- Monthly Payment = Total Payable / Number of Months
+
+---
+
+## 📌 Notes
+This is a basic educational calculator intended for quick loan estimates and demonstration purposes, not for financial or lending decision-making.
